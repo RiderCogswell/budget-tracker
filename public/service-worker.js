@@ -29,3 +29,35 @@ self.addEventListener('install', function(event) {
     )
 });
 
+// activate service worker
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+        // .keys() represents all the cache names, which we're calling keyList
+        caches.keys().then(function(keyList) {
+            let cacheKeeplist = keyList.filter(function(key) {
+                return key.indexOf(APP_PREFIX)
+            })
+            // add current cache to the keep list
+            cacheKeeplist.push(CACHE_NAME);
+
+            // returns a promise that will not resolve until
+            return Promise.all(keyList.map(function(key, i) {
+                // all old versions of the cache are deleted 
+                if (cacheKeeplist.indexOf(key) === -1) {
+                    console.log('deleting cache : ' + keyList[i]);
+                    return caches.delete(keyList[i]);
+                }
+            }));
+        })
+    );
+});
+
+// tell application how to retrieve the info from the cache
+self.addEventListener('fetch', function(event) {
+    console.log('fetch request : ' + event.request.url);
+    event.respondWith(
+        caches.match(event.request).then(function(request) {
+            return request || fetch(event.request);
+        })
+    );
+});
