@@ -25,7 +25,7 @@ THEN the deposits or expenses added while they were offline are added to their t
 
   ## Technologies
   ```
-  Mongoose, IndexedDB, Express.js, Node.js, Heroku
+  Mongoose, MongoDB, IndexedDB, Express.js, Node.js, Heroku
   ```
 
   ## Link
