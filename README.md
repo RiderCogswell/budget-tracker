@@ -1,7 +1,7 @@
 # Budget Tracker
 
   ## Description
-  A budget tracker app that allows the user to add expenses and make deposits while giving the user an easily understandable view of their finances. The app is available offline and is fully downloadable!
+  Budget Tracker allows a user to add expenses and make deposits while giving the user an easily understandable snapshot of their finances. The app is available offline and is fully downloadable!
 
   ## Table of Contents
   - [User-Story](#user-story)
@@ -29,7 +29,7 @@ THEN the deposits or expenses added while they were offline are added to their t
   ```
 
   ## Link
-  https://dry-castle-41527.herokuapp.com/
+  [Check it out!](https://dry-castle-41527.herokuapp.com/)
 
 
   ## Questions
