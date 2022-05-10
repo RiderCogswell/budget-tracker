@@ -1,7 +1,7 @@
 # Budget Tracker
 
   ## Description
-  Backend development of a E-Commerce web application using Node, Express, MySql2, dotenv, and Sequelize to perform CRUD functions, which can be queried through Insomnia (or on a browser).
+  A budget tracker app that allows the user to add expenses and make deposits while giving the user an easily understandable view of their finances. The app is available offline and is fully downloadable!
 
   ## Table of Contents
   - [User-Story](#user-story)
